@@ -3,7 +3,7 @@
 PariDispari = prompt("Pari o dispari?");
 console.log(PariDispari);
 UserNumber = parseInt(prompt("Scegli un numero da"));
-console.log = (UserNumber);
+console.log(UserNumber);
 
 
 //funzione per numero casuale da 1 a 100;
@@ -12,12 +12,12 @@ function RndCpuNumber () {
 }
 
 //richiamare la funzione cpunumer;
-const cpuNumber = RndCpuNumber;
-return cpuNumber;
+const cpuNumber = RndCpuNumber();
+console.log(cpuNumber);
 
 //funzione per determinare chi ha vinto
 //parametri: UserNumber cpuNumber, PariDispari, 
-function WinOrLose ( ) {
+function WinOrLose (PariDispari , UserNumber , cpuNumber ) {
 
     // somma = UserNumber + cpuNumber;
     //risultato = somma / 2
@@ -30,15 +30,15 @@ function WinOrLose ( ) {
     console.log (` Il risultato è ${risultato}`)
 
     if (risultato % 2 === 0 ) {
-        return ("Pari");
+        console.log ("Pari");
 
     }else{
-        return ("dispari");
+        console.log ("dispari");
     }
 
-    if (risultato === PariDispari) {
+    if (risultato % 2 === 0 && PariDispari === "pari") {
         console.log("Hai vinto!")
-    }else {
+    }else if (risultato % 2 !== 0 && PariDispari === "dispari") {
         console.log ("Hai perso!")
     }
     
