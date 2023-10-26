@@ -13,10 +13,38 @@ function RndCpuNumber () {
 
 //richiamare la funzione cpunumer;
 const cpuNumber = RndCpuNumber;
-console.log(cpuNumber);
+return cpuNumber;
 
 //funzione per determinare chi ha vinto
+//parametri: UserNumber cpuNumber, PariDispari, 
 function WinOrLose ( ) {
+
+    // somma = UserNumber + cpuNumber;
+    //risultato = somma / 2
+    //--if somma /2 = 0 Pari
+    //else dispari
+
+    let somma = UserNumber + cpuNumber;
+    let risultato = somma; 
+
+    console.log (` Il risultato è ${risultato}`)
+
+    if (risultato % 2 === 0 ) {
+        return ("Pari");
+
+    }else{
+        return ("dispari");
+    }
+
+    if (risultato === PariDispari) {
+        console.log("Hai vinto!")
+    }else {
+        console.log ("Hai perso!")
+    }
     
 }
+
+//chiamare la funzione per determinare il vincitore:
+
+WinOrLose (PariDispari, UserNumber, cpuNumber);
 
