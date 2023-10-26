@@ -2,7 +2,7 @@
 // chiedere all'utente di scegliere pari o dispari
 PariDispari = prompt("Pari o dispari?");
 console.log(PariDispari);
-UserNumber = parseInt(prompt("Scegli un numero da"));
+UserNumber = parseInt(prompt("Scegli un numero"));
 console.log(UserNumber);
 
 
@@ -25,21 +25,23 @@ function WinOrLose (PariDispari , UserNumber , cpuNumber ) {
     //else dispari
 
     let somma = UserNumber + cpuNumber;
-    let risultato = somma; 
+    let ePari = somma % 2 === 0;
 
-    console.log (` Il risultato è ${risultato}`)
+    console.log (` Il risultato è ${somma}`)
 
-    if (risultato % 2 === 0 ) {
+    if (ePari ) {
         console.log ("Pari");
 
     }else{
         console.log ("dispari");
     }
 
-    if (risultato % 2 === 0 && PariDispari === "pari") {
+    if (ePari && PariDispari === "pari") {
         console.log("Hai vinto!")
-    }else if (risultato % 2 !== 0 && PariDispari === "dispari") {
-        console.log ("Hai perso!")
+    }else if (!ePari && PariDispari === "dispari") {
+        console.log ("Hai vinto!")
+    }else{
+        console.log ("Hai perso!");
     }
     
 }
