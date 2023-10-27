@@ -38,10 +38,13 @@ function WinOrLose (PariDispari , UserNumber , cpuNumber ) {
 
     if (ePari && PariDispari === "pari") {
         console.log("Hai vinto!")
+        document.getElementById("winlose").innerHTML= "Hai vinto!"
     }else if (!ePari && PariDispari === "dispari") {
         console.log ("Hai vinto!")
+        document.getElementById("winlose").innerHTML= "Hai vinto!"
     }else{
         console.log ("Hai perso!");
+        document.getElementById("winlose").innerHTML= "Hai perso!"
     }
     
 }
