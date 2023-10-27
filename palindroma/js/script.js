@@ -36,8 +36,10 @@ const risultato = Palindroma(UserWord);
 
 if (risultato) {
     console.log (`${UserWord} è un palindromo`);
+    document.getElementById("ultimorisultato").innerHTML = `${UserWord} NON è una parola palindroma!`
 }else{
     console.log (`${UserWord} non è un palindromo`);
+    document.getElementById("ultimorisultato").innerHTML = `${UserWord} NON è una parola palindroma!`
 }
 
 
